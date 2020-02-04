@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" attributeFormDefault="unqualified" targetNamespace="...\Schemas\ComosToXML.xsd" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ComosToXML">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Comos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="Data">
+                <xs:complexType>
+                  <xs:sequence>        
+                <xs:element name="EPC_Revision" type="xs:unsignedByte" />                                                                                    
+                <xs:element name="EPC_Rev_Kommentar" type="xs:string" />	                                                                                                
+                <xs:element name="MSR-Status" type="xs:string" />	                                                                                                            
+                <xs:element name="Rev_PMS" type="xs:unsignedByte" />
+                <xs:element name="PMS_Kommentar" type="xs:string" />	                                                                                                                                                                                                                                                                              
+                <xs:element name="Rev_ACT" type="xs:unsignedByte" />	                             
+                <xs:element name="ACT_Kommentar" type="xs:string" />		                                                                                                                                                                                      
+                <xs:element name="Funktion_erzeugt_am" type="xs:string" />	                                                                                                                                                                                                     
+                <xs:element name="Funktion" type="xs:string" />		                  
+                <xs:element name="Tag_Nr" type="xs:string" />	                
+                <xs:element name="Tag_Name" type="xs:string" />		                
+                <xs:element name="Tag_Name_Actemium" type="xs:string" />		                
+                <xs:element name="Teilanlage" type="xs:unsignedByte" />	                
+                <xs:element name="Beschreibung" type="xs:string" />		                
+                <xs:element name="Ebene" type="xs:string" />		                
+                <xs:element name="XYZ_Koordinate" type="xs:string" />	                
+                <xs:element name="Hersteller" type="xs:string" />		                
+                <xs:element name="Typ_Geraet" type="xs:string" />		                
+                <xs:element name="Gereäte_Beschreibung" type="xs:string" />	
+                <xs:element name="Anbindung" type="xs:string" />	                
+                <xs:element name="Signalrichtung" type="xs:string" />	                            
+                <xs:element name="Wertebereich" type="xs:string" />	                           
+                <xs:element name="Signalphysik" type="xs:string" />	                
+                <xs:element name="Safetyposition" type="xs:string" />		               
+                <xs:element name="SW_Typical" type="xs:string" />		                
+                <xs:element name="OS_Bildbaustein" type="xs:string" />		                
+                <xs:element name="Signal_erzeugt_am" type="xs:string" />	              
+                <xs:element name="Signalerweiterung" type="xs:string" />	               
+                <xs:element name="Signal_Status" type="xs:string" />		               
+                <xs:element name="Signalbezeichnung" type="xs:string" />		               
+                <xs:element name="Verbalbeschreibung" type="xs:string" />		                
+                <xs:element name="PLS_Signal" type="xs:string" />		               
+                <xs:element name="Signalgrundtyp" type="xs:string" />		                
+                <xs:element name="MB_min" type="xs:string" />		                
+                <xs:element name="MB_max" type="xs:string" />		                
+                <xs:element name="Einheit_Messbereich" type="xs:string" />	                
+                <xs:element name="Hysterese" type="xs:string" />	              
+                <xs:element name="Reglerwirkung" type="xs:string" />		                
+                <xs:element name="Stellgrenze_L" type="xs:string" />		               
+                <xs:element name="Stellgrenze_H" type="xs:string" />		                
+                <xs:element name="Alarm_unten" type="xs:string" />		                
+                <xs:element name="Warnung_unten" type="xs:string" />		                
+                <xs:element name="Toleranz_unten" type="xs:string" />		               
+                <xs:element name="Alarm_oben" type="xs:string" />		                
+                <xs:element name="Warnung_oben	" type="xs:string" />	                
+                <xs:element name="Toleranz_oben" type="xs:string" />		               
+                <xs:element name="Bedeutung_0" type="xs:string" />		                
+                <xs:element name="Bedeutung_1" type="xs:string" />		                
+                <xs:element name="revers" type="xs:string" />		                
+                <xs:element name="Busstrang" type="xs:string" />	                
+                <xs:element name="SK3" type="xs:unsignedByte" />                
+                <xs:element name="Trunk" type="xs:unsignedByte" />               
+                <xs:element name="Feldbarriere" type="xs:unsignedByte" />	                
+                <xs:element name="AS_Zuordnung" type="xs:string" />		                
+                <xs:element name="IO_Station" type="xs:string" />		               
+                <xs:element name="Rack" type="xs:string" />		               
+                <xs:element name="Steckplatz" type="xs:unsignedByte" />	                                            
+                <xs:element name="Kanal" type="xs:unsignedByte" />	                           
+                <xs:element name="HW_Typical" type="xs:string" />		
+                <xs:element name="HW_Adresse" type="xs:string" />		                          
+                <xs:element name="PB_Adresse" type="xs:unsignedByte" />	                           
+                <xs:element name="Kartentyp" type="xs:string" />		                            
+                <xs:element name="SlaveTyp" type="xs:string" />		                            
+                <xs:element name="Archivierungszyklus" type="xs:string" />		                            
+                <xs:element name="Kurzname_Bild" type="xs:string" />		                            
+                <xs:element name="RuI" type="xs:string" />		                            
+                <xs:element name="Planungsoption" type="xs:string" />		                             
+                <xs:element name="Ausbaustufe_filter" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>                                             
+  </xs:element>
+</xs:schema>

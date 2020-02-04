@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="MSR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="MSR_Gerät">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Erzeugt" type="xs:string" />
+              <xs:element name="Geräte_Bezeichnung" type="xs:string" />
+              <xs:element name="Bezeichnung" type="xs:string" />
+              <xs:element name="Aktiv" type="xs:unsignedByte" />
+              <xs:element name="Ausbaustufe" type="xs:unsignedByte" />
+              <xs:element name="Funktion" type="xs:string" />
+              <xs:element name="Tag_NR" type="xs:string" />
+              <xs:element name="TAG_NAME" type="xs:string" />
+              <xs:element name="TAG_NAME_ACT" type="xs:string" />
+              <xs:element name="PL" type="xs:string" />
+              <xs:element name="Ebene" type="xs:string" />
+              <xs:element name="Koordinate" type="xs:string" />
+              <xs:element name="Gerät" type="xs:string" />
+              <xs:element name="Hersteller" type="xs:string" />
+              <xs:element name="Geräte_Beschreibung" type="xs:string"/>
+              <xs:element name="EPLAN_DATA">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Status_Erstellt" type="xs:unsignedByte" />
+                    <xs:element name="Erstellungsdatum" type="xs:string" />
+                    <xs:element name="Makroname" type="xs:string" />
+                    <xs:element name="Bemerkungen" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Signale">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="Signal">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Signal" type="xs:string" />
+                          <xs:element name="Erzeugt" type="xs:string" />
+                          <xs:element name="Signal_Aktiv" type="xs:unsignedByte" />
+                          <xs:element name="AS" type="xs:string" />                         
+                          <xs:element name="SignalKonfig">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Anbindung" type="xs:string" />
+                                <xs:element name="Signalrichtung" type="xs:string" />
+                                <xs:element name="Wertebereich" type="xs:string" />
+                                <xs:element name="Signalgrundtyp" type="xs:string" />
+                                <xs:element name="Signalphysik" type="xs:string" />
+                                <xs:element name="Signalindex" type="xs:unsignedByte" />
+                                <xs:element name="Safeposition" type="xs:string" />
+                                <xs:element name="Signalerweiterung" type="xs:string" />
+                                <xs:element name="MessbereichMin" type="xs:string" />
+                                <xs:element name="MessbereichMax" type="xs:string" />
+                                <xs:element name="Einheit" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Revision">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="RevEPC" type="xs:unsignedByte" />
+                                <xs:element name="RevEPC_Komentar" type="xs:string" />
+                                <xs:element name="RevPMS" type="xs:unsignedByte" />
+                                <xs:element name="RevPMS_Komentar" type="xs:string" />
+                                <xs:element name="RevACT" type="xs:unsignedByte" />
+                                <xs:element name="RevACT_Komentar" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="HW_Anbindung">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Busstrang" type="xs:string" />
+                                <xs:element name="Profibus_PA">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="SK3" type="xs:unsignedByte" />
+                                      <xs:element name="Trunk" type="xs:unsignedByte" />
+                                      <xs:element name="Feldbarriere" type="xs:unsignedByte" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Kartentyp" type="xs:string" />
+                                <xs:element name="SlaveTyp" type="xs:string" />
+                                <xs:element name="IO_Station" type="xs:string" />
+                                <xs:element name="RACK" type="xs:string" />
+                                <xs:element name="Steckplatz" type="xs:string" />
+                                <xs:element name="Kanal" type="xs:string" />
+                                <xs:element name="HW_Adresse" type="xs:string" />
+                                <xs:element name="PB_Adresse" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Software">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Verbalbeschreibung" type="xs:string" />
+                                <xs:element name="Hysterese" type="xs:string" />
+                                <xs:element name="Reglerwirkung" type="xs:string" />
+                                <xs:element name="StellgrenzeMin" type="xs:string" />
+                                <xs:element name="StellgrenzeMax" type="xs:string"/>
+                                <xs:element name="AlarmUnten" type="xs:string" />
+                                <xs:element name="WarnungUnten" type="xs:string" />
+                                <xs:element name="ToleranzUnten" type="xs:string" />
+                                <xs:element name="TolerenzOben" type="xs:string" />
+                                <xs:element name="WarnungOben" type="xs:string" />
+                                <xs:element name="AlarmOben" type="xs:string" />
+                                <xs:element name="SignalBedeutungFalse" type="xs:string" />
+                                <xs:element name="SignalBedeutungTrue" type="xs:string" />
+                                <xs:element name="Reverse" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="Signal" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+             </xs:sequence>
+            <xs:attribute name="TAG" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

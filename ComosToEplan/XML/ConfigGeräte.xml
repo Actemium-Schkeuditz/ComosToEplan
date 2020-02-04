@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<MSRGeraete xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Feldgerraete>
+    <Gerät>
+      <Hersteller>Siemens</Hersteller>
+      <Gerätetyp>SITRANS P DS III</Gerätetyp>
+      <Bestellcode />
+      <Beschreibung>Druckmessung</Beschreibung>
+      <Anschluß_Plus>+</Anschluß_Plus>
+      <Anschluß_Minus>-</Anschluß_Minus>
+    </Gerät>
+    <Gerät>
+      <Hersteller>Siemens</Hersteller>
+      <Gerätetyp>Sipart PS II</Gerätetyp>
+      <Bestellcode />
+      <Beschreibung>Stellungsregler</Beschreibung>
+      <Anschluß_Plus>+</Anschluß_Plus>
+      <Anschluß_Minus>-</Anschluß_Minus>
+    </Gerät>
+    <Gerät>
+      <Hersteller>Siemens</Hersteller>
+      <Gerätetyp>Pt100 3-Leiter</Gerätetyp>
+      <Bestellcode />
+      <Beschreibung />
+      <Anschluß_Plus>1</Anschluß_Plus>
+      <Anschluß_Minus>2</Anschluß_Minus>
+    </Gerät>
+    <Gerät>
+      <Hersteller>Krohne</Hersteller>
+      <Gerätetyp>DK32/K1/S/A-Ex</Gerätetyp>
+      <Bestellcode />
+      <Beschreibung />
+      <Anschluß_Plus>1</Anschluß_Plus>
+      <Anschluß_Minus>2</Anschluß_Minus>
+    </Gerät>
+    <Gerät>
+      <Hersteller>Krohne</Hersteller>
+      <Gerätetyp>H250/RR/M40/ESK-Ex</Gerätetyp>
+      <Bestellcode />
+      <Beschreibung />
+      <Anschluß_Plus>D</Anschluß_Plus>
+      <Anschluß_Minus>D-</Anschluß_Minus>
+    </Gerät>
+    <Gerät>
+      <Hersteller>Endress&amp;Hauser</Hersteller>
+      <Gerätetyp>Promass E200</Gerätetyp>
+      <Bestellcode />
+      <Beschreibung />
+      <Anschluß_Plus>1</Anschluß_Plus>
+      <Anschluß_Minus>2</Anschluß_Minus>
+    </Gerät>
+    <Gerät>
+      <Hersteller>Endress&amp;Hauser</Hersteller>
+      <Gerätetyp>Promag P200</Gerätetyp>
+      <Bestellcode />
+      <Beschreibung />
+      <Anschluß_Plus>1</Anschluß_Plus>
+      <Anschluß_Minus>2</Anschluß_Minus>
+    </Gerät>
+    <Gerät>
+      <Hersteller>Endress&amp;Hauser</Hersteller>
+      <Gerätetyp>Prowirl F200</Gerätetyp>
+      <Bestellcode />
+      <Beschreibung />
+      <Anschluß_Plus>1</Anschluß_Plus>
+      <Anschluß_Minus>2</Anschluß_Minus>
+    </Gerät>
+    <Gerät>
+      <Hersteller>Endress&amp;Hauser</Hersteller>
+      <Gerätetyp>Levelflex FMP51</Gerätetyp>
+      <Bestellcode />
+      <Beschreibung />
+      <Anschluß_Plus>1</Anschluß_Plus>
+      <Anschluß_Minus>2</Anschluß_Minus>
+    </Gerät>
+    <Gerät>
+      <Hersteller>Endress&amp;Hauser</Hersteller>
+      <Gerätetyp>Micropilot FMR52</Gerätetyp>
+      <Bestellcode />
+      <Beschreibung />
+      <Anschluß_Plus>1</Anschluß_Plus>
+      <Anschluß_Minus>2</Anschluß_Minus>
+    </Gerät>
+    <Gerät>
+      <Hersteller>Endress&amp;Hauser</Hersteller>
+      <Gerätetyp>Liquiphant M FTL51</Gerätetyp>
+      <Bestellcode />
+      <Beschreibung />
+      <Anschluß_Plus>1</Anschluß_Plus>
+      <Anschluß_Minus>2</Anschluß_Minus>
+    </Gerät>
+    <Gerät>
+      <Hersteller>Gefran</Hersteller>
+      <Gerätetyp>HMX0-6-M</Gerätetyp>
+      <Bestellcode />
+      <Beschreibung />
+      <Anschluß_Plus>1</Anschluß_Plus>
+      <Anschluß_Minus>2</Anschluß_Minus>
+    </Gerät>
+    <Gerät>
+      <Hersteller>Samson</Hersteller>
+      <Gerätetyp>3730-4</Gerätetyp>
+      <Bestellcode />
+      <Beschreibung />
+      <Anschluß_Plus>+</Anschluß_Plus>
+      <Anschluß_Minus>-</Anschluß_Minus>
+    </Gerät>
+    <Gerät>
+      <Hersteller>WIKA</Hersteller>
+      <Gerätetyp>TR10-B</Gerätetyp>
+      <Bestellcode />
+      <Beschreibung />
+      <Anschluß_Plus>1</Anschluß_Plus>
+      <Anschluß_Minus>2</Anschluß_Minus>
+    </Gerät>
+    <Gerät>
+      <Hersteller>Foxboro</Hersteller>
+      <Gerätetyp>SRD991</Gerätetyp>
+      <Bestellcode />
+      <Beschreibung>Stellungsregler</Beschreibung>
+      <Anschluß_Plus>11</Anschluß_Plus>
+      <Anschluß_Minus>12</Anschluß_Minus>
+    </Gerät>
+  </Feldgerraete>
+</MSRGeraete>

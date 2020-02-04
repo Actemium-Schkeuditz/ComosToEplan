@@ -1,0 +1,23 @@
+﻿# Programm zur Umsetzung der MSR Liste zur Bearbeitung PCH02
+# Bassis ist XML 
+
+1. Einlesen der Konfigliste von EPC nach XML
+	- Status: funktioniert aber Struktur ist eventuell nicht perfekt
+
+2. Einlesen des Inhaltsverzeichnis aus Eplan
+	- Status: erledigt, 
+	--->bis auf den Filter
+
+3. Vergleich der Listen EPC und Eplan Inhaltsverzeichnis und Ausgabe
+	3.1 Ausgabe welche MSR-Geräte schon erledigt sind
+		- Status:	Vergleich funktioniert, setzen des Attributes in EPC Datenliste
+					Übernahme der Daten nach EPC-Liste notwendig?
+	3.2 Ausgabe der offenen Geräte in gefilter Liste (PL)
+		- Status:	offen
+
+4. Vergleich von zwei Konfigurationsdateien
+	Status: nur Entwurf
+
+DoTo:
+	- Filter für Inhaltsverzeichnis anpassen
+	- Export für Eplan entwickeln

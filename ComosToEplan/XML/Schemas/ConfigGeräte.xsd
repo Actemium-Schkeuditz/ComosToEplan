@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="MSRGeraete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Feldgerraete">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="Gerät">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Hersteller" type="xs:string" />
+                    <xs:element name="Gerätetyp" type="xs:string" />
+                    <xs:element name="Bestellcode" type="xs:string"/>
+                    <xs:element name="Beschreibung" type="xs:string" />
+                    <xs:element name="Anschluß_Plus" type="xs:string" />
+                    <xs:element name="Anschluß_Minus" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

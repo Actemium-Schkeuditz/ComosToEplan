@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+  <xsd:element name="MSRGeraete">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Pumpen">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element maxOccurs="unbounded" name="Membranpumpe">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="BMK" type="xsd:string" />
+                    <xsd:element name="Bezeichnung" type="xsd:string" />
+                    <xsd:element name="PL" type="xsd:unsignedByte" />
+                    <xsd:element name="Ebene" type="xsd:unsignedByte" />
+                    <xsd:element name="Sensoren">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="Hubregelung" type="xsd:string" />
+                          <xsd:element minOccurs="0" name="Membranüberwachung_außen_2" type="xsd:string" />
+                          <xsd:element minOccurs="0" name="Membranüberwachung_außen_1" type="xsd:string" />
+                          <xsd:element minOccurs="0" name="Membranüberwachung_innen_2" type="xsd:string" />
+                          <xsd:element name="Membranüberwachung_innen_1" type="xsd:string" />
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element minOccurs="0" name="Membranpumpe">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="BMK" type="xsd:string" />
+                          <xsd:element name="Bezeichnung" type="xsd:string" />
+                          <xsd:element name="PL" type="xsd:unsignedByte" />
+                          <xsd:element name="Ebene" type="xsd:unsignedByte" />
+                          <xsd:element name="Sensoren">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element name="Hubregelung" type="xsd:string" />
+                                <xsd:element name="Membranüberwachung_außen_2" type="xsd:string" />
+                                <xsd:element name="Membranüberwachung_außen_1" type="xsd:string" />
+                                <xsd:element name="Membranüberwachung_innen_2" type="xsd:string" />
+                                <xsd:element name="Membranüberwachung_innen_1" type="xsd:string" />
+                              </xsd:sequence>
+                            </xsd:complexType>
+                          </xsd:element>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xs:schema>

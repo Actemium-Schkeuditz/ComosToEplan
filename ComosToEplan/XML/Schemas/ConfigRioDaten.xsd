@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+  <xsi:element name="MSRKaesten">
+    <xsi:complexType>
+      <xsi:sequence>
+        <xsi:element name="RemoteIO">
+          <xsi:complexType>
+            <xsi:sequence>
+              <xsi:element maxOccurs="unbounded" name="RIO">
+                <xsi:complexType>
+                  <xsi:sequence>
+                      <xsi:element name="Typ" type="xsi:string" />
+                      <xsi:element name="BMK" type="xsi:string" />
+                      <xsi:element name="Networktyp" type="xsi:string" />
+                      <xsi:element name="Master" type="xsi:string" />
+                      <xsi:element name="Adresse" type="xsi:unsignedByte" />
+                      <xsi:element name="Subnet" type="xsi:unsignedByte" />
+                      <xsi:element name="Ventilinsel" type="xsi:boolean" />
+                      <xsi:element name="ersterSteckplatzVentileInsel" type="xsi:unsignedByte" />
+                  </xsi:sequence>
+                </xsi:complexType>
+              </xsi:element>
+            </xsi:sequence>
+          </xsi:complexType>
+        </xsi:element>
+      </xsi:sequence>
+    </xsi:complexType>
+  </xsi:element>
+</xs:schema>

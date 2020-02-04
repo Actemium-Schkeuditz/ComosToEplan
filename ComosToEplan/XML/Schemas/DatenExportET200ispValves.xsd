@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="EEC_ET200ISP_Valve">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="TYPICAL_DATA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="HW_Typical" type="xs:string" />
+              <xs:element name="Functional_assignment" />
+              <xs:element name="Higher_level_function" type="xs:string" />
+              <xs:element name="Intallation_site" />
+              <xs:element name="Mounting_location" type="xs:string" />
+              <xs:element name="Higher_level_function_number" />
+              <xs:element name="Document_type" />
+              <xs:element name="User_defined" type="xs:string" />
+              <xs:element name="Page_name" type="xs:unsignedByte" />
+              <xs:element name="Representation_Type" />
+              <xs:element name="Variant" />
+              <xs:element name="erzeugen" />
+              <xs:element name="Seitenbeschreibung" type="xs:string" />
+              <xs:element name="Funktionstext" type="xs:string" />
+              <xs:element name="DB_Stand" type="xs:string" />
+              <xs:element name="Messstelle" type="xs:string" />
+              <xs:element name="BMK_RIO" type="xs:string" />
+              <xs:element name="BMK_DO" />
+              <xs:element name="Signalname_DO" />
+              <xs:element name="Adresse_DO" />
+              <xs:element name="BMK_GOH" type="xs:string" />
+              <xs:element name="Signalname_GOH" type="xs:string" />
+              <xs:element name="Adresse_GOH" type="xs:string" />
+              <xs:element name="BMK_GOL" type="xs:string" />
+              <xs:element name="Signalname_GOL" type="xs:string" />
+              <xs:element name="Adresse_GOL" type="xs:string" />
+              <xs:element name="Anschlüsse_GOH-" type="xs:unsignedByte" />
+              <xs:element name="Anschlüsse_GOH_Plus" type="xs:unsignedByte" />
+              <xs:element name="Anschlüsse_GOL-" type="xs:unsignedByte" />
+              <xs:element name="Anschlüsse_GOL_Plus" type="xs:unsignedByte" />
+              <xs:element name="Typ_ventil" />
+              <xs:element name="Typ_Endlagen" type="xs:string" />
+              <xs:element name="Abgang_RIO_LUFT" type="xs:string" />
+              <xs:element name="ET200isp_DO_Kanal" />
+              <xs:element name="ET200_ISP_GOH_Kanal" type="xs:unsignedByte" />
+              <xs:element name="ET200_ISP_GOL_Kanal" type="xs:unsignedByte" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

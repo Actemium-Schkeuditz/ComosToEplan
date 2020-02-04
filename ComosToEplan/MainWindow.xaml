@@ -1,0 +1,221 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ComosToEplan"
+        xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="ComosToEplan.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="427" Width="875">
+    <Grid x:Name="___Canvas_Impot_" Margin="0,10,2,2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="83*"/>
+            <RowDefinition Height="154*"/>
+            <RowDefinition Height="238*"/>
+        </Grid.RowDefinitions>
+
+
+        <Button x:Name="button1" Content="Schließen" Margin="683,0,16,10" Click="btn_close_Click" RenderTransformOrigin="2.837,4.51" Grid.Row="2" Height="22" VerticalAlignment="Bottom"/>
+
+
+
+        <TabControl x:Name="tabControl" Margin="10,10,10,49" Grid.RowSpan="3" SelectionChanged="tabControl_SelectionChanged">
+            <TabItem Header="Import">
+                <Canvas x:Name="CanvasImportTab" Margin="5,5,10,16" Grid.Row="1" Grid.RowSpan="2">
+                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="72" Stroke="Black" VerticalAlignment="Top" Width="735" Canvas.Top="101"/>
+                    <Label x:Name="label_Copy" Content="Import Eplan Inhaltsverzeichnis" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="18" Canvas.Top="101"/>
+                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="90" Stroke="Black" VerticalAlignment="Top" Width="735" Canvas.Top="6"/>
+                    <Button x:Name="laden" Content="Auswählen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Click="btnSelectComosFile_Click" Canvas.Left="12" Canvas.Top="48"/>
+                    <Button x:Name="button" Content="Laden" VerticalAlignment="Top" Click="btnImportComosData_Click" HorizontalAlignment="Left" Width="114" Canvas.Left="607" Canvas.Top="47"/>
+                    <Button x:Name="laden_Copy1" Content="Inhaltsverzeichnis laden" HorizontalAlignment="Left" VerticalAlignment="Top" Width="121" Click="btnOpenFileEplan_Click" FontSize="10" Canvas.Left="18" Canvas.Top="132"/>
+                    <Label x:Name="label" Content="Import Konfigurationsliste" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="11" Canvas.Top="12"/>
+                    <TextBox x:Name="tbImportExcel" HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="480" Canvas.Left="120" Canvas.Top="48" FontSize="10">
+                        <TextBox.ContextMenu>
+                            <ContextMenu>
+                                <ContextMenu.CacheMode>
+                                    <BitmapCache/>
+                                </ContextMenu.CacheMode>
+                            </ContextMenu>
+                        </TextBox.ContextMenu>
+                        <TextBox.CacheMode>
+                            <BitmapCache EnableClearType="True"/>
+                        </TextBox.CacheMode>
+                    </TextBox>
+                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="72" Stroke="Black" VerticalAlignment="Top" Width="735" Canvas.Top="184"/>
+                    <Label x:Name="label_Copy3" Content="Suchen von Fehlern in Konfig" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="11" Canvas.Top="191"/>
+                    <Button x:Name="btnFehlerSuchen" Content="Fehler suchen" VerticalAlignment="Top" HorizontalAlignment="Left" Width="114" Canvas.Left="607" Canvas.Top="218" Click="btnFehlerSuchen_Click"/>
+                    <Button x:Name="btnAuswahlConfigFürFehlersuche" Content="Auswählen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Canvas.Left="12" Canvas.Top="219" Click="btnAuswahlConfigFürFehlersuche_Click"/>
+                    <TextBox x:Name="tbFehlersuche" HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="480" Canvas.Left="120" Canvas.Top="219" FontSize="10">
+                        <TextBox.ContextMenu>
+                            <ContextMenu>
+                                <ContextMenu.CacheMode>
+                                    <BitmapCache/>
+                                </ContextMenu.CacheMode>
+                            </ContextMenu>
+                        </TextBox.ContextMenu>
+                        <TextBox.CacheMode>
+                            <BitmapCache EnableClearType="True"/>
+                        </TextBox.CacheMode>
+                    </TextBox>
+                </Canvas>
+            </TabItem>
+            <TabItem Header="Vergleicher">
+                <Canvas x:Name="CanvasVergtleicherTab" Margin="5" Grid.Row="1" Grid.RowSpan="2">
+                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="90" Stroke="Black" VerticalAlignment="Top" Width="730" Grid.RowSpan="2" Grid.Row="1" Canvas.Left="5" Canvas.Top="6"/>
+                    <Label x:Name="label_Copy1" Content="Vergleich Eplan Inhalt und COMOS" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Canvas.Left="13" Canvas.Top="10" FontWeight="Bold"/>
+                    <TextBox x:Name="tbopenEplanContent" HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="480" Grid.RowSpan="2" Grid.Row="1" Canvas.Left="136" Canvas.Top="64" FontSize="10">
+                        <TextBox.ContextMenu>
+                            <ContextMenu>
+                                <ContextMenu.CacheMode>
+                                    <BitmapCache/>
+                                </ContextMenu.CacheMode>
+                            </ContextMenu>
+                        </TextBox.ContextMenu>
+                        <TextBox.CacheMode>
+                            <BitmapCache EnableClearType="True"/>
+                        </TextBox.CacheMode>
+                    </TextBox>
+                    <Button x:Name="btnselectEplanContent" Content="Auswahl Eplan" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Click="btnSelectFileEplanContent_Click" Grid.RowSpan="2" Grid.Row="1" Canvas.Left="21" Canvas.Top="64"/>
+                    <Button x:Name="btnselectComosContent" Content="Auswahl Comos" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Click="btnSelectComosContent_Click" Grid.Row="2" Canvas.Left="20" Canvas.Top="36"/>
+                    <TextBox x:Name="tbopenComosContent" HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="480" Grid.Row="2" Canvas.Left="135" Canvas.Top="36" FontSize="10">
+                        <TextBox.ContextMenu>
+                            <ContextMenu>
+                                <ContextMenu.CacheMode>
+                                    <BitmapCache/>
+                                </ContextMenu.CacheMode>
+                            </ContextMenu>
+                        </TextBox.ContextMenu>
+                        <TextBox.CacheMode>
+                            <BitmapCache EnableClearType="True"/>
+                        </TextBox.CacheMode>
+                    </TextBox>
+                    <Button x:Name="btnXmlCompare" Content="XML Vergelich" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Click="btnXmlCompareMerge_click" Grid.Row="2" Canvas.Left="621" Canvas.Top="64"/>
+                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="90" Stroke="Black" VerticalAlignment="Top" Width="730" Canvas.Left="5" Canvas.Top="102"/>
+                    <Label x:Name="label_Copy2" Content="Vergleich COMOS Listen" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="13" Canvas.Top="109" FontWeight="Bold"/>
+                    <TextBox x:Name="tbopenComosContent_New" HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="480" Canvas.Left="136" Canvas.Top="164" FontSize="10">
+                        <TextBox.ContextMenu>
+                            <ContextMenu>
+                                <ContextMenu.CacheMode>
+                                    <BitmapCache/>
+                                </ContextMenu.CacheMode>
+                            </ContextMenu>
+                        </TextBox.ContextMenu>
+                        <TextBox.CacheMode>
+                            <BitmapCache EnableClearType="True"/>
+                        </TextBox.CacheMode>
+                    </TextBox>
+                    <Button x:Name="btnselectComosContent_New" Content="Neue Daten" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Click="btnSelectComosContent_New_Click" Canvas.Left="21" Canvas.Top="164"/>
+                    <Button x:Name="btnselectComosContent_Old" Content="Alte Daten" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Click="btnSelectComosContent_Old_Click" Canvas.Left="20" Canvas.Top="136"/>
+                    <TextBox x:Name="tbopenComosContent_Old" HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="480" Canvas.Left="135" Canvas.Top="136" FontSize="10">
+                        <TextBox.ContextMenu>
+                            <ContextMenu>
+                                <ContextMenu.CacheMode>
+                                    <BitmapCache/>
+                                </ContextMenu.CacheMode>
+                            </ContextMenu>
+                        </TextBox.ContextMenu>
+                        <TextBox.CacheMode>
+                            <BitmapCache EnableClearType="True"/>
+                        </TextBox.CacheMode>
+                    </TextBox>
+                    <Button x:Name="btnComosCompare" Content="XML Vergelich" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Click="btnComosCompare_click" Canvas.Left="623" Canvas.Top="165"/>
+                </Canvas>
+            </TabItem>
+            <TabItem Header="Test">
+                <Canvas x:Name="CanvasTestTab" Margin="5" Grid.Row="1" Grid.RowSpan="2">
+                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="105" Margin="5,5.921,0,0" Stroke="Black" VerticalAlignment="Top" Width="706" Grid.RowSpan="2" Grid.Row="1"/>
+                    <Button x:Name="Button_XML_Serach" Content="XML Durchsuchen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Click="btn_XML_Search_Click" Grid.Row="2" Canvas.Left="445" Canvas.Top="29"/>
+                    <Button x:Name="btnXMLread" Content="XML lesen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="btnXMLread_click" Grid.Row="2" RenderTransformOrigin="0.941,-2.103" Canvas.Left="211" Canvas.Top="29"/>
+                    <Button x:Name="btnXMLread_Copy" Content="XML Vergl." HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="btnXmlTest_click" Grid.Row="2" Canvas.Left="325" Canvas.Top="29"/>
+                    <Button x:Name="btnEplanToOutput" Content="Eplan to Out" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="btnEplanDatatoOutput_click" Grid.Row="2" Canvas.Left="579" Canvas.Top="29"/>
+                    <Button x:Name="btnCompareComos" Content="Comos laden" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="btnCompareComos_click" RenderTransformOrigin="0.941,-2.103" Canvas.Left="39" Canvas.Top="29"/>
+                </Canvas>
+            </TabItem>
+            <TabItem x:Name="tabPaConfig" Header="PA Config">
+                <Canvas x:Name="CanvasAuswahlTab" Margin="5" Grid.Row="1" Grid.RowSpan="2">
+                    <DataGrid x:Name="dGconfigPaKaesten" Height="220" Width="805" CellEditEnding="dGconfigPaKaestenEdit_click" Canvas.Left="10" Canvas.Top="10"/>
+                    <Button x:Name="btnReadConfigPA" Content="PA lesen" Width="75" Click="btnReadConfigPA_Click" Canvas.Left="16" Canvas.Top="248"/>
+                    <Button x:Name="btnAddRowPAConfig" Content="neue Zeile" Width="75" Click="btnPAConfigAddRow_click" Canvas.Left="121" Canvas.Top="248" RenderTransformOrigin="1.462,0.516"/>
+                    <Button x:Name="btnAddRowPASave" Content="Speichern" Width="75" Click="btnPAConfigSave_click" Canvas.Left="737" Canvas.Top="248"/>
+                    <Button x:Name="btnEraseRowPAConfig" Content="Zeile löschen" Width="75" Click="btnPAConfigEraseRow_click" Canvas.Left="254" Canvas.Top="248" RenderTransformOrigin="1.462,0.516"/>
+                </Canvas>
+            </TabItem>
+            <TabItem x:Name="tabGeräteConfig" Header="Geräte Config">
+                <Canvas x:Name="CanvasGeräteTab" Margin="5" Grid.Row="1" Grid.RowSpan="2">
+                    <DataGrid x:Name="dGconfigGeräte" Height="219" Width="805" CellEditEnding="dGconfigGeräteEdit_click" Canvas.Left="10" Canvas.Top="10"/>
+                    <Button x:Name="btnReadGeräteConfig" Content="Geräte lesen" Width="75" Click="btnGeräteConfigRead_Click" Canvas.Left="16" Canvas.Top="250"/>
+                    <Button x:Name="btnAddRowGeräteConfig" Content="neue Zeile" Width="75" Click="btnGeräteConfigAddRow_click" Canvas.Left="121" Canvas.Top="250" RenderTransformOrigin="1.462,0.516"/>
+                    <Button x:Name="btnAddRowGeräteSave" Content="Speichern" Width="75" Click="btnGeräteConfigSave_click" Canvas.Left="739" Canvas.Top="250"/>
+                    <Button x:Name="btnEraseRowGeräteConfig" Content="Zeile löschen" Width="75" Click="btnGeräteConfigEraseRow_click" Canvas.Left="254" Canvas.Top="250" RenderTransformOrigin="1.462,0.516"/>
+                </Canvas>
+            </TabItem>
+            <TabItem x:Name="tabRioConfig" Header="RIO Config">
+                <Grid x:Name="CanvasRIOTab" Margin="5" Grid.Row="1" Grid.RowSpan="2">
+                    <Button x:Name="btnReadRioConfig" Content="RIO lesen" Width="75" Click="btnReadRioConfig_Click" Canvas.Left="16" Canvas.Top="250" Margin="34,258,716,0"/>
+                    <Button x:Name="btnAddRowRioConfig" Content="neue Zeile" Width="75" Click="btnAddRowRioConfig_Click" Canvas.Left="121" Canvas.Top="250" RenderTransformOrigin="1.462,0.516" Margin="513,258,237,0"/>
+                    <Button x:Name="btnAddRowRioSave" Content="Speichern" Width="75" Click="btnAddRowRioSave_Click" Canvas.Left="739" Canvas.Top="250" Margin="727,258,23,0"/>
+                    <Button x:Name="btnEraseRowRioConfig" Content="Zeile löschen" Width="75" Click="btnEraseRowRioConfig_Click" Canvas.Left="254" Canvas.Top="250" RenderTransformOrigin="1.462,0.516" Margin="375,258,375,0"/>
+                    <DataGrid x:Name="dGconfigRioKaesten" CellEditEnding="dGconfigRioKaesten_CellEditEnding" Margin="10,10,10,54"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tabDRLPConfig" Header="Pumpen Config">
+                <Canvas x:Name="CanvasAuswahlDRLPTab" Margin="5,10,5,5" Grid.Row="1" Grid.RowSpan="2">
+                    <Button x:Name="btnConfigPumpenRead" Content="Pumpen lesen" Click="btnReadConfigPumpen_Click" Height="23" Canvas.Left="23" Canvas.Top="246" Width="94"/>
+                    <Button x:Name="btnConfigPumpenAddRow" Content="neue Zeile" Click="btnPumpenConfigAddRow_click" RenderTransformOrigin="1.462,0.516" HorizontalAlignment="Right" Width="106" Height="23" Canvas.Left="369" Canvas.Top="246"/>
+                    <Button x:Name="btnConfigPumpenSave" Content="Speichern" Click="btnPumpenConfigSave_click" HorizontalAlignment="Right" Width="106" Height="23" Canvas.Left="669" Canvas.Top="246"/>
+                    <Button x:Name="btnEraseRowPumpenConfig" Content="Zeile löschen" Click="btnPumpenConfigEraseRow_click" RenderTransformOrigin="1.462,0.516" HorizontalAlignment="Left" Width="100" Height="23" Canvas.Left="186" Canvas.Top="246"/>
+                    <TreeView x:Name="tvConfigPumpen" Height="223" Canvas.Left="34" Width="768">
+                        <TreeView.ContextMenu>
+                            <ContextMenu/>
+                        </TreeView.ContextMenu>
+                    </TreeView>
+                </Canvas>
+            </TabItem>
+            <TabItem Header="Ausgabe">
+                <Canvas x:Name="CanvasAusgabelTab" Margin="5" Grid.Row="1" Grid.RowSpan="2">
+                    <Label x:Name="label_Ausgabe" Content="Export" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <Button x:Name="btnselectComosToEplan" Content="Auswahl Comos" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Click="btnselectComosToEplan_Click" Grid.Row="2" Canvas.Left="20" Canvas.Top="36"/>
+                    <Button x:Name="btnExportToEplan" Content="Export nach Eplan" Canvas.Left="621" Canvas.Top="36" Width="109" Click="btnExportToEplan_Click" RenderTransformOrigin="0.596,0.591"/>
+                    <TextBox x:Name="tbopenComosToEplan" HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" Text="Comos Daten" VerticalAlignment="Top" Width="480" Grid.Row="2" Canvas.Left="135" Canvas.Top="36" FontSize="10">
+                        <TextBox.ContextMenu>
+                            <ContextMenu>
+                                <ContextMenu.CacheMode>
+                                    <BitmapCache/>
+                                </ContextMenu.CacheMode>
+                            </ContextMenu>
+                        </TextBox.ContextMenu>
+                        <TextBox.CacheMode>
+                            <BitmapCache EnableClearType="True"/>
+                        </TextBox.CacheMode>
+                    </TextBox>
+                    <DataGrid x:Name="dGconfigPL" Height="184" Width="283" CellEditEnding="dGconfigPLEdit_click" Canvas.Left="10" Canvas.Top="78" IsManipulationEnabled="True"/>
+                    <Button x:Name="btnReadPLConfigNew" Content="PL Auswahl neu" Canvas.Left="324" Canvas.Top="240" Width="94" Click="btnReadPLConfigNew_Click"/>
+                    <CheckBox x:Name="cbEnableOutputGO" Content="Export Handventile GO" Canvas.Left="324" Canvas.Top="203"/>
+                    <Grid Height="81" Canvas.Left="606" Canvas.Top="83" Width="189">
+                        <CheckBox x:Name="cbEnableOutputPA" Content="Export PA Geräte" HorizontalAlignment="Left" Width="107" Height="16" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="cbEnableOutputPt100PA" Content="Export Pt100 PA Geräte" Margin="0,20,0,0" HorizontalAlignment="Left" Width="141" Height="16" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="cbEnableOutputPADi" Content="Export PA Sensoranschaltung" Margin="0,40,10,21"/>
+                        <CheckBox x:Name="cbEnableOutputPumpenDrl" Content="Export Druckluftpumpen" Margin="0,60,17,5"/>
+                    </Grid>
+                    <CheckBox x:Name="cbEnableOutputET200ispYS" Content="Export nicht FS-Ventile YS" Canvas.Left="324" Canvas.Top="161"/>
+                    <CheckBox x:Name="cbEnableOutputHSO" Content="Export Steuerstellen HSO" Canvas.Left="324" Canvas.Top="182"/>
+                    <Grid Height="57" Canvas.Left="324" Canvas.Top="83" Width="171">
+                        <CheckBox x:Name="cbEnableOutputTRCZ" Content="Export Doppel-Pt100 TRCZ/TRC" Margin="0,40,0,0" Height="16" VerticalAlignment="Top" HorizontalAlignment="Left" Width="185"/>
+                        <CheckBox x:Name="cbEnableOutputValvesFS" Content="Export Ventile FS" Margin="0,20,0,0" Height="16" VerticalAlignment="Top" HorizontalAlignment="Left" Width="106"/>
+                        <CheckBox x:Name="cbEnableOutputAnaFS" Content="Export Analogwerte FS" Height="16" VerticalAlignment="Top" HorizontalAlignment="Left" Width="137"/>
+                    </Grid>
+                    <CheckBox x:Name="cbEnableOutputAna" Content="Export Analogwerte" Canvas.Left="324" Canvas.Top="218"/>
+                    <CheckBox x:Name="cbEnableFilterInEplan" Content="Export nicht in Eplan" Canvas.Left="10" Canvas.Top="267"/>
+                </Canvas>
+            </TabItem>
+        </TabControl>
+        <ProgressBar x:Name="pBprogress" HorizontalAlignment="Left" Height="10" Margin="31,0,0,22" Grid.Row="2" VerticalAlignment="Bottom" Width="205">
+            <ProgressBar.ContextMenu>
+                <ContextMenu/>
+            </ProgressBar.ContextMenu>
+        </ProgressBar>
+
+
+
+    </Grid>
+</Window>

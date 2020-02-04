@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="EEC_PAPt100">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="TYPICAL_DATA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="HW_Typical" type="xs:string" />
+              <xs:element name="Functional_assignment" />
+              <xs:element name="Higher_level_function" type="xs:string" />
+              <xs:element name="Intallation_site" />
+              <xs:element name="Mounting_location" type="xs:string" />
+              <xs:element name="Higher_level_function_number" />
+              <xs:element name="Document_type" />
+              <xs:element name="User_defined" type="xs:string" />
+              <xs:element name="Page_name" type="xs:unsignedByte" />
+              <xs:element name="Representation_Type" />
+              <xs:element name="Variant" />
+              <xs:element name="erzeugen" />
+              <xs:element name="Seitenbeschreibung" type="xs:string" />
+              <xs:element name="Funktionstext" type="xs:string" />
+              <xs:element name="DB_Stand" type="xs:string" />
+              <xs:element name="Messstelle" type="xs:string" />
+              <xs:element name="Messstelle_Kabel" type="xs:string" />
+              <xs:element name="BMK_PA" type="xs:string" />
+              <xs:element name="BMK_TI" type="xs:string" />
+              <xs:element name="Spur_NR" type="xs:string" />
+              <xs:element name="Signalname_AI" type="xs:string" />
+              <xs:element name="Adresse_AI" type="xs:string" />
+              <xs:element name="Typ_Gerät" type="xs:string" />
+              <xs:element name="Gerät_Funktion" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
