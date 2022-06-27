@@ -6,7 +6,7 @@
 //     Änderungen an dieser Datei können falsches Verhalten verursachen und gehen verloren, wenn
 //     der Code erneut generiert wird.
 // </auto-generated>
-// upload tu gitHUB
+// upload to gitHUB
 //------------------------------------------------------------------------------
 
 // 
